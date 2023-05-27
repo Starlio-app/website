@@ -10,7 +10,11 @@ body {
     user-select: none;
 }
 
-#content p {
+a {
+    text-decoration: none;
+}
+
+#content p, .form-select, #download {
     font-family: 'Roboto', sans-serif;
 }
 
@@ -153,7 +157,7 @@ body {
     #devices {
         width: 50%;
         height: 50%;
-        margin: 15% 2%;
+        margin: 10% 2%;
     }
 
     #title {
