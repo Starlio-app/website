@@ -1,7 +1,6 @@
 function load(date) {
     fetch(`https://api.starlio.space/wallpaper/${date}`).then(res => {
         res.json().then(data => {
-            console.log(data);
             if (data.length === 0) return;
 
             document.querySelector("div.wallpaper img").src = data.url;
@@ -13,12 +12,13 @@ function load(date) {
 }
 
 function parseURL() {
-    const pathname = document.location.pathname
+    let pathname = document.location.pathname
+    pathname = pathname.slice(pathname.lastIndexOf('/')+1)
 
     if (isNaN(new Date(pathname).getTime())) return null;
     if (!isValidDate(pathname)) return null;
 
-    return Number(pathname);
+    return pathname;
 }
 
 
