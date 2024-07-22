@@ -1,0 +1,125 @@
+body {
+    background: #153E3F;
+    color: white;
+    font-family: 'Roboto', serif;
+}
+
+@media (min-width: 0) {
+    .wallpaper img {
+        width: 90%;
+        border-radius: 8px;
+        margin: 0 auto 0 auto;
+        display: flex;
+    }
+
+    .wallpaper h1 {
+        text-align: center;
+    }
+
+    .copyright {
+        font-size: 110%;
+        width: 90%;
+    }
+
+    p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .desc {
+        font-size: 125%;
+        line-height: 32px;
+        width: 90%;
+    }
+
+    .wallpaper-text {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+    .get-it-on {
+        display: flex;
+        margin: 5% auto 3% auto;
+    }
+
+}
+
+@media (min-width: 768px) {
+    .get-it-on {
+        display: flex;
+        margin: 5% auto 3% auto;
+    }
+
+    .desc {
+        font-size: 150%;
+        line-height: 39px;
+        width: 90%;
+    }
+
+    .copyright {
+        font-size: 125%;
+        width: 90%;
+    }
+}
+
+@media (min-width: 992px) {
+    .wallpaper img {
+        width: 65%;
+        border-radius: 8px;
+        margin: 0 auto 0 auto;
+        display: flex;
+    }
+
+    .desc {
+        font-size: 200%;
+        line-height: 45px;
+        width: 90%;
+    }
+
+    .copyright {
+        font-size: 150%;
+        width: 90%;
+    }
+
+    .wallpaper h1 {
+        text-align: center;
+        font-size: 250%;
+    }
+
+}
+
+@media (min-width: 1200px) {
+    .wallpaper img {
+        width: 40%;
+        border-radius: 8px;
+        float: left;
+    }
+
+    .wallpaper-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .desc {
+        font-size: 150%;
+        line-height: 36px;
+        width: 90%;
+    }
+
+    .copyright {
+        font-size: 120%;
+    }
+
+    .get-it-on {
+        display: block ;
+        width: 70%;
+        margin-left: 15%;
+        margin-right: auto;
+    }
+}
+
+@media (min-width: 1400px) {
+    .wallpaper img {
+        max-width: 27%;
+    }
+}
