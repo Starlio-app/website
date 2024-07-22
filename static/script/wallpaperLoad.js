@@ -3,20 +3,21 @@ function load(date) {
         res.json().then(data => {
             if (data.length === 0) return;
 
-            document.querySelector("div.wallpaper img").src = data.url;
+            document.querySelector("div.wallpaper img").src = data.hdurl;
+            document.querySelector("div.wallpaper img").alt = data.title;
             document.querySelector("div.wallpaper div.wallpaper-text div.wallpaper-desc h1").innerHTML = data.title;
-            document.querySelector(".copyright").innerHTML = `Image Credit & Copyright: ${data.copyright}`;
+            document.querySelector(".copyright").innerHTML = data.copyright ? `Copyright: ${data.copyright}` : ''
             document.querySelector(".desc").innerHTML = data.explanation;
         });
     });
 }
 
 function parseURL() {
-    let pathname = document.location.pathname
+    let pathname = '2024-01-01';
     pathname = pathname.slice(pathname.lastIndexOf('/')+1)
 
-    if (isNaN(new Date(pathname).getTime())) return null;
-    if (!isValidDate(pathname)) return null;
+    if (isNaN(new Date(pathname).getTime())) return window.location.replace("./404.html");
+    if (!isValidDate(pathname)) return window.location.replace("./404.html");
 
     return pathname;
 }
