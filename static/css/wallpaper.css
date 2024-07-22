@@ -63,6 +63,13 @@ body {
 }
 
 @media (min-width: 992px) {
+    .wallpaper img {
+        width: 65%;
+        border-radius: 8px;
+        margin: 0 auto 0 auto;
+        display: flex;
+    }
+
     .desc {
         font-size: 200%;
         line-height: 45px;
@@ -103,6 +110,16 @@ body {
         font-size: 120%;
     }
 
-    
+    .get-it-on {
+        display: block ;
+        width: 70%;
+        margin-left: 15%;
+        margin-right: auto;
+    }
+}
 
+@media (min-width: 1400px) {
+    .wallpaper img {
+        max-width: 27%;
+    }
 }
