@@ -13,7 +13,7 @@ function load(date) {
 }
 
 function parseURL() {
-    let pathname = '2024-01-01';
+    let pathname = document.location.pathname;
     pathname = pathname.slice(pathname.lastIndexOf('/')+1)
 
     if (isNaN(new Date(pathname).getTime())) return window.location.replace("./404.html");
