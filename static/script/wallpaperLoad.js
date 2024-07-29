@@ -16,8 +16,8 @@ function parseURL() {
     let pathname = document.location.pathname;
     pathname = pathname.slice(pathname.lastIndexOf('/')+1)
 
-    if (isNaN(new Date(pathname).getTime())) return window.location.replace("./404.html");
-    if (!isValidDate(pathname)) return window.location.replace("./404.html");
+    if (isNaN(new Date(pathname).getTime())) return window.location.replace("../404.html");
+    if (!isValidDate(pathname)) return window.location.replace("../404.html");
 
     return pathname;
 }
