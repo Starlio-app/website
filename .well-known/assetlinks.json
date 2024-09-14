@@ -1,0 +1,14 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "ru.murzify.everynasa",
+      "sha256_cert_fingerprints": [
+        "3D:37:00:88:14:AB:C3:6B:02:7B:C9:AB:F9:96:F1:8F:7E:E7:FE:05:F9:64:62:F8:39:CA:DF:88:69:97:68:B7"
+      ]
+    }
+  }
+]
