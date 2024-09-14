@@ -1,4 +1,4 @@
-<p align="center"><img src="banner.png" alt="Banner starlio"></p>
+<p align="center"><img src="/assest/banner.png" alt="Banner starlio"></p>
 
 > **Note**
 > Official website of the Starlio project
