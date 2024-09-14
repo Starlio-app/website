@@ -13,12 +13,15 @@
 
     <meta property="og:title" content="Starlio">
     <meta property="og:description" content="Amazing wallpaper straight from space!">
-    <meta property="og:image" content="/static/image/favicon.png">
+    <meta property="og:image" content="{{info.hdurl}}">
+    <meta property="og:image:alt" content="{{info.title}}">
     <meta property="og:url" content="https://starlio.space">
 
-    <meta property="twitter:title" content="Starlio">
-    <meta property="twitter:description" content="Amazing wallpaper straight from space!">
-    <meta property="twitter:image" content="/static/image/favicon.png">
+    <meta name="twitter:title" content="Starlio">
+    <meta name="twitter:description" content="Amazing wallpaper straight from space!">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="{{info.hdurl}}">
+    <meta name="twitter:creator" content="@Redddume, @Murzify">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -32,13 +35,13 @@
 </head>
 <body>
     <div class="wallpaper">
-        <img alt="Spiral Aurora over Iceland"
-             src="https://apod.nasa.gov/apod/image/2301/RockyArchAurora_Pellegrini_1330.jpg">
+        <img alt="{{info.title}}"
+             src="{{info.url}}">
             <div class="wallpaper-text">
                 <div class="wallpaper-desc">
-                    <h1>Spiral Aurora over Iceland</h1>
-                    <p class="copyright">Copyright: Stefano Pellegrini</p>
-                    <p class="desc"> The scene may look like a fantasy, but it's really Iceland. The rock arch is named Gatklettur and located on the island's northwest coast. Some of the larger rocks in the foreground span a meter across. The fog over the rocks is really moving waves averaged over long exposures. The featured image is a composite of several foreground and background shots taken with the same camera and from the same location on the same night last November. The location was picked for its picturesque foreground, but the timing was planned for its colorful background: aurora. The spiral aurora, far behind the arch, was one of the brightest seen in the astrophotographer's life. The coiled pattern was fleeting, though, as auroral patterns waved and danced for hours during the cold night. Far in the background were the unchanging stars, with Earth's rotation causing them to appear to slowly circle the sky's northernmost point near Polaris.</p>
+                    <h1>{{info.title}}</h1>
+                    <p class="copyright">Copyright: {{info.copyright}}</p>
+                    <p class="desc">{{info.explanation}}</p>
                 </div>
                 <div class="get-it-on">
                     <a href='https://play.google.com/store/apps/details?id=ru.murzify.everynasa'>
@@ -50,6 +53,5 @@
                 </div>
             </div>
     </div>
-<script src="/static/script/wallpaperLoad.js"></script>
 </body>
 </html>
