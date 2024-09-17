@@ -36,13 +36,19 @@
 <body>
     <div class="wallpaper">
         <img alt="{{info.title}}"
-             src="{{info.url}}">
+             src="{{info.url}}" 
+             onclick="window.open('{{info.hdurl}}')"
+             class="wallpaper-img">
+
             <div class="wallpaper-text">
                 <div class="wallpaper-desc">
                     <h1>{{info.title}}</h1>
-                    <p class="copyright">Copyright: {{info.copyright}}</p>
+                    {% if info.copyright %}
+                        <p class="copyright">Copyright: {{info.copyright}}</p>
+                    {% endif %}
                     <p class="desc">{{info.explanation}}</p>
                 </div>
+
                 <div class="get-it-on">
                     <a href='https://play.google.com/store/apps/details?id=ru.murzify.everynasa'>
                         <img src='/static/image/get-it-on-gp.png' alt='Get it on Google Play'>
