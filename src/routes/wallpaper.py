@@ -15,8 +15,6 @@ async def wallpaper(request: Request, day):
         'api_key': '1gI9G84ZafKDEnrbydviGknReOGiVK9jqrQBE3et',
         'date': day,
     })
-        
-    print(res.json())
 
     return template.TemplateResponse(
         request,
