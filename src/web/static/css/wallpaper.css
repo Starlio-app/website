@@ -7,8 +7,7 @@ body {
 @media (min-width: 0) {
     .wallpaper img {
         width: 90%;
-        border-radius: 8px;
-        margin: 0 auto 0 auto;
+        border-radius: 2%;
         display: flex;
         cursor: pointer;
     }
@@ -29,17 +28,18 @@ body {
 
     .desc {
         font-size: 125%;
-        line-height: 32px;
         width: 90%;
+        text-align: justify
     }
 
     .wallpaper-text {
-      display: flex;
-      flex-direction: column-reverse;
+        display: flex;
+        flex-direction: column-reverse;
     }
 
     .get-it-on {
         display: flex;
+        width: 50%;
         margin: 0 auto 0 auto;
     }
 
@@ -65,11 +65,10 @@ body {
 
 @media (min-width: 992px) {
     .wallpaper-img {
-        width: 500px;
-        height: 700px;
-        border-radius: 8px;
+        width: calc(100% - 16px);
+        height: 100%;
+        border-radius: 16px;
         margin: 0 auto 0 auto;
-        margin-bottom: 15%;
         display: flex;
         cursor: pointer;
         object-fit: cover;
