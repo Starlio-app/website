@@ -18,6 +18,7 @@ app.mount('/.well-known/', StaticFiles(directory='./.well-known/'))
 async def app_ads(req, __):
     return FileResponse('./app-ads.txt')
 
+
 @app.exception_handler(404)
 async def not_found(req, __):
     return FileResponse('./src/web/html/error/404.html')

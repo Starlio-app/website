@@ -8,6 +8,7 @@ router = APIRouter()
 
 template = Jinja2Templates(directory='./src/web/html')
 
+
 @router.get('/wallpaper/{day}', response_class=HTMLResponse)
 async def wallpaper(request: Request, day):
     token = '1gI9G84ZafKDEnrbydviGknReOGiVK9jqrQBE3et'
