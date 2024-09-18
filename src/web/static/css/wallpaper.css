@@ -1,5 +1,5 @@
 body {
-    background: #153E3F;
+    background: #2F3041;
     color: white;
     font-family: 'Roboto', serif;
 }
@@ -10,6 +10,7 @@ body {
         border-radius: 8px;
         margin: 0 auto 0 auto;
         display: flex;
+        cursor: pointer;
     }
 
     .wallpaper h1 {
@@ -39,7 +40,7 @@ body {
 
     .get-it-on {
         display: flex;
-        margin: 5% auto 3% auto;
+        margin: 0 auto 0 auto;
     }
 
 }
@@ -63,11 +64,15 @@ body {
 }
 
 @media (min-width: 992px) {
-    .wallpaper img {
-        width: 65%;
+    .wallpaper-img {
+        width: 500px;
+        height: 700px;
         border-radius: 8px;
         margin: 0 auto 0 auto;
+        margin-bottom: 15%;
         display: flex;
+        cursor: pointer;
+        object-fit: cover;
     }
 
     .desc {
@@ -89,10 +94,11 @@ body {
 }
 
 @media (min-width: 1200px) {
-    .wallpaper img {
+    .wallpaper-img {
         width: 40%;
         border-radius: 8px;
         float: left;
+        cursor: pointer;
     }
 
     .wallpaper-text {
@@ -111,15 +117,14 @@ body {
     }
 
     .get-it-on {
-        display: block ;
-        width: 70%;
-        margin-left: 15%;
-        margin-right: auto;
+        display: flex;
+        width: 50%;
     }
 }
 
 @media (min-width: 1400px) {
-    .wallpaper img {
+    .wallpaper-img {
         max-width: 27%;
+        cursor: pointer;
     }
 }
