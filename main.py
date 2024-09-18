@@ -1,6 +1,6 @@
 from fastapi.staticfiles import StaticFiles
 from starlette.responses import FileResponse
-from fastapi import FastAPI, APIRouter
+from fastapi import FastAPI
 
 from src.routes import index
 from src.routes import wallpaper
