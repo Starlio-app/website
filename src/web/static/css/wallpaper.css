@@ -83,7 +83,6 @@ img {
 @media (min-width: 992px) {
     html, body {
         height: 100%;
-        overflow: hidden;
     }
 
     * {
@@ -92,13 +91,15 @@ img {
         box-sizing: border-box;
     }
 
-    .wallpaper-img {
-        height: 100%;
+    .wallpaper-img{
+        width: 30%;
         border-radius: 16px;
-        display: flex;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
         object-fit: cover;
     }
-
+    
     .wallpaper {
         display: flex;
         height: 100vh;
@@ -126,6 +127,10 @@ img {
         width: 100%;
     }
 
+    .wallpaper-text {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 @media (min-width: 1200px) {
