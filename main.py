@@ -19,6 +19,11 @@ async def app_ads(req, __):
     return FileResponse('./app-ads.txt')
 
 
+@app.route('/robots.txt')
+async def robots_txt(req, __):
+    return FileResponse('./robots.txt')
+
+
 @app.exception_handler(404)
 async def not_found(req, __):
     return FileResponse('./src/web/html/error/404.html')
