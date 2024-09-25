@@ -15,12 +15,12 @@ app.mount('/.well-known/', StaticFiles(directory='./.well-known/'))
 
 
 @app.route('/app-ads.txt')
-async def app_ads(req, __):
+async def app_ads(req):
     return FileResponse('./app-ads.txt')
 
 
 @app.route('/robots.txt')
-async def robots_txt(req, __):
+async def robots_txt(req):
     return FileResponse('./robots.txt')
 
 
