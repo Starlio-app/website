@@ -24,7 +24,6 @@ async def today_wallpaper(request: Request):
 @router.get('/wallpaper/{day}', response_class=HTMLResponse)
 async def wallpaper(request: Request, day):
     res = requests.get(f'https://api.starlio.space/wallpaper/{day}')
-    print(res)
 
     if res.status_code != 200:
         return FileResponse('./src/web/html/error/404.html')
