@@ -1,8 +1,7 @@
 <p align="center"><img src="/assets/banner.png" alt="Banner starlio"></p>
 
-> **Note**
+> [!NOTE]
 > Official website of the Starlio project
-
 
 ### The project site is under the Apache-2.0 [license](NOTICE)
 ```
