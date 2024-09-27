@@ -42,7 +42,7 @@ a {
         text-align: center;
     }
 
-    #google-play, #github, #today-wall {
+    #google-play, #github {
         width: 45%;
         height: 45%;
     }
@@ -63,7 +63,7 @@ a {
         margin-top: -140%;
     }
 
-    #google-play, #github, #today-wall {
+    #google-play, #github {
         width: 37%;
         height: 37%;
     }
@@ -97,7 +97,7 @@ a {
         margin: 0 auto;
     }
 
-    #google-play, #github, #today-wall {
+    #google-play, #github {
         width: 30%;
         height: 30%;
     }
@@ -124,7 +124,7 @@ a {
         font-size: 1.3em;
     }
 
-    #google-play, #github, #today-wall {
+    #google-play, #github {
         width: 25%;
         height: 25%;
     }
@@ -158,7 +158,7 @@ a {
         font-size: 1.5em;
     }
 
-    #google-play, #github, #today-wall {
+    #google-play, #github {
         width: 25%;
         height: 25%;
     }
@@ -199,7 +199,7 @@ a {
         margin: 2% 60%;
     }
 
-    #google-play, #github, #today-wall {
+    #google-play, #github {
         width: 35%;
         height: 35%;
     }
