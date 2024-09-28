@@ -4,9 +4,6 @@ on:
   push:
     branches:
       - main
-  release:
-    types:
-      - published
 
 env:
   REGISTRY: cr.yandex
@@ -34,17 +31,10 @@ jobs:
           username: oauth
           password: ${{ secrets.YANDEX_OAUTH_TOKEN }}
 
-      - name: Extract metadata (tags, labels) for Docker
-        id: meta
-        uses: docker/metadata-action@v5
-        with:
-          images: ${{ env.REGISTRY }}/${{ env.REGISTRY_ID }}/${{ env.IMAGE_NAME }}
-
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
         with:
           context: .
           push: true
-          tags: ${{ env.REGISTRY }}/${{ env.REGISTRY_ID }}/${{ env.IMAGE_NAME }}:${{ steps.meta.outputs.version }}
-          labels: ${{ steps.meta.outputs.labels }}
+          tags: ${{ env.REGISTRY }}/${{ env.REGISTRY_ID }}/${{ env.IMAGE_NAME }}:main
           platforms: linux/amd64,linux/arm64
