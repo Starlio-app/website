@@ -1,5 +1,7 @@
 .git/
 .vscode/
 .idea/
+.github
+
 .DS_Store
 __pycache__
