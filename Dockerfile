@@ -8,4 +8,4 @@ RUN pip3 install --no-cache-dir --upgrade -r /starlio-web/requirements.txt
 
 COPY ./ /starlio-web/
 
-CMD ["fastapi", "run", "main.py", "--port", "8000"]
+CMD ["python", "main.py"]
