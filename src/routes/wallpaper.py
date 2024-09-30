@@ -16,9 +16,8 @@ async def today_wallpaper(request: Request):
     date = datetime.today().strftime('%Y-%m-%d')
     res = requests.get(f'https://api.starlio.space/last')
 
-    if not HTTPStatus(res.status_code).is_redirection or \
-    not HTTPStatus(res.status_code).is_success:
-
+    if HTTPStatus(res.status_code).is_server_error or \
+     HTTPStatus(res.status_code).is_client_error:
         return FileResponse('./src/web/html/error/404.html')
 
     return RedirectResponse(f'/wallpaper/{date}')
@@ -28,8 +27,8 @@ async def today_wallpaper(request: Request):
 async def wallpaper(request: Request, day):
     res = requests.get(f'https://api.starlio.space/wallpaper/{day}')
 
-    if not HTTPStatus(res.status_code).is_redirection or \
-    not HTTPStatus(res.status_code).is_success:
+    if HTTPStatus(res.status_code).is_server_error or \
+     HTTPStatus(res.status_code).is_client_error:
         return FileResponse('./src/web/html/error/404.html')
 
     return template.TemplateResponse(
