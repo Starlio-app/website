@@ -4,6 +4,7 @@ from fastapi.templating import Jinja2Templates
 
 import requests
 from datetime import datetime
+from http import HTTPStatus
 
 router = APIRouter()
 
@@ -15,7 +16,9 @@ async def today_wallpaper(request: Request):
     date = datetime.today().strftime('%Y-%m-%d')
     res = requests.get(f'https://api.starlio.space/last')
 
-    if res.status_code != 200:
+    if not HTTPStatus(res.status_code).is_redirection or \
+    not HTTPStatus(res.status_code).is_success:
+
         return FileResponse('./src/web/html/error/404.html')
 
     return RedirectResponse(f'/wallpaper/{date}')
@@ -25,7 +28,8 @@ async def today_wallpaper(request: Request):
 async def wallpaper(request: Request, day):
     res = requests.get(f'https://api.starlio.space/wallpaper/{day}')
 
-    if res.status_code != 200:
+    if not HTTPStatus(res.status_code).is_redirection or \
+    not HTTPStatus(res.status_code).is_success:
         return FileResponse('./src/web/html/error/404.html')
 
     return template.TemplateResponse(
