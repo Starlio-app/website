@@ -4,24 +4,24 @@
     <meta charset="UTF-8">
     <title>Starlio</title>
     <link rel="icon" href="/static/image/favicon.png">
-
-    <meta name="author" content="Redume, Murzify">
-    <meta name="description" content="Amazing wallpaper straight from space!">
+    {% if info.copyright %}
+        <meta name="author" content="{{info.copyright}}">
+    {% endif %}
+    <meta name="description" content="{{info.explanation}}">
     <meta name="keywords" content="nasa, space, wallpaper, auto change wallpaper, starlio">
 
     <meta name="theme-color" content="#2F3041">
 
     <meta property="og:title" content="Starlio">
-    <meta property="og:description" content="Amazing wallpaper straight from space!">
+    <meta property="og:description" content="{{info.explanation}}">
     <meta property="og:image" content="{{info.hdurl}}">
     <meta property="og:image:alt" content="{{info.title}}">
     <meta property="og:url" content="https://starlio.space">
 
     <meta name="twitter:title" content="Starlio">
-    <meta name="twitter:description" content="Amazing wallpaper straight from space!">
+    <meta name="twitter:description" content="{{info.explanation}}">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content="{{info.hdurl}}">
-    <meta name="twitter:creator" content="@Redddume, @Murzify">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
